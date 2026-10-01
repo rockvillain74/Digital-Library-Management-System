@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Library - Add Book</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">📚 DigiLibrary</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="catalog.html">Catalog</a></li>
+      <li><a href="add-book.html" class="active">Add Book</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <h1>📝 Add New Book</h1>
+    <p>Add a new book to your library collection</p>
+  </section>
+
+  <!-- Add Book Form -->
+  <div class="container">
+    <div class="form-container">
+      <h2>📖 Book Details</h2>
+
+      <form id="add-book-form">
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="book-title">Book Title *</label>
+            <input type="text" id="book-title" placeholder="Enter book title" required>
+            <div class="error-msg" id="title-error"></div>
+          </div>
+          <div class="form-group">
+            <label for="book-author">Author *</label>
+            <input type="text" id="book-author" placeholder="Enter author name" required>
+            <div class="error-msg" id="author-error"></div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="book-category">Category *</label>
+            <select id="book-category" required>
+              <option value="">Select Category</option>
+              <option value="Fiction">Fiction</option>
+              <option value="Science">Science</option>
+              <option value="History">History</option>
+              <option value="Technology">Technology</option>
+              <option value="Philosophy">Philosophy</option>
+              <option value="Art">Art</option>
+            </select>
+            <div class="error-msg" id="category-error"></div>
+          </div>
+          <div class="form-group">
+            <label for="book-year">Publication Year *</label>
+            <input type="number" id="book-year" placeholder="e.g. 2024" required>
+            <div class="error-msg" id="year-error"></div>
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-group">
+            <label for="book-isbn">ISBN *</label>
+            <input type="text" id="book-isbn" placeholder="e.g. 978-3-16-148410-0" required>
+            <div class="error-msg" id="isbn-error"></div>
+          </div>
+          <div class="form-group">
+            <label for="book-status">Availability</label>
+            <select id="book-status">
+              <option value="true">Available</option>
+              <option value="false">Checked Out</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="book-description">Description</label>
+          <textarea id="book-description" rows="4" placeholder="Enter a short description..."></textarea>
+        </div>
+
+        <div class="form-buttons">
+          <button type="submit" class="btn btn-success">✅ Add Book</button>
+          <button type="reset" class="btn btn-orange">🔄 Reset</button>
+          <a href="catalog.html" class="btn btn-primary">← Back to Catalog</a>
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <h3>📚 DigiLibrary</h3>
+        <p>Your personal digital library management system.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="add-book.html">Add Book</a>
+        <a href="about.html">About</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>📧 info@digilibrary.com</p>
+        <p>📞 +91 98765 43210</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 DigiLibrary. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

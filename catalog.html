@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Digital Library - Catalog</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar">
+    <div class="logo">📚 DigiLibrary</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="catalog.html" class="active">Catalog</a></li>
+      <li><a href="add-book.html">Add Book</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <!-- Page Header -->
+  <section class="page-header">
+    <h1>📚 Book Catalog</h1>
+    <p>Browse and search all books in the library</p>
+  </section>
+
+  <!-- Catalog Content -->
+  <div class="container">
+
+    <!-- Filter Bar -->
+    <div class="filter-bar">
+      <input type="text" id="search-input" placeholder="🔍 Search by title or author...">
+      <select id="category-filter">
+        <option value="">All Categories</option>
+        <option value="Fiction">Fiction</option>
+        <option value="Science">Science</option>
+        <option value="History">History</option>
+        <option value="Technology">Technology</option>
+        <option value="Philosophy">Philosophy</option>
+        <option value="Art">Art</option>
+      </select>
+    </div>
+
+    <!-- Results Count -->
+    <p id="results-count" style="margin-bottom:15px; color:#777;"></p>
+
+    <!-- Books Grid -->
+    <div class="book-grid" id="books-container"></div>
+
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div>
+        <h3>📚 DigiLibrary</h3>
+        <p>Your personal digital library management system.</p>
+      </div>
+      <div>
+        <h3>Quick Links</h3>
+        <a href="index.html">Home</a>
+        <a href="catalog.html">Catalog</a>
+        <a href="add-book.html">Add Book</a>
+        <a href="about.html">About</a>
+      </div>
+      <div>
+        <h3>Contact</h3>
+        <p>📧 info@digilibrary.com</p>
+        <p>📞 +91 98765 43210</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 DigiLibrary. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
