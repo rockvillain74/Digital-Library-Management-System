@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Book Catalog — Digital Library</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="books">
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <span class="logo">📚 Digital Library</span>
+    <ul class="nav-links">
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="books.html" class="active">Book Catalog</a></li>
+      <li><a href="issue-return.html">Issue / Return</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1 class="page-title">Book Catalog</h1>
+
+    <!-- Search & Add Button -->
+    <div class="search-bar">
+      <input type="text" id="searchInput" placeholder="Search by title, author, or genre…" />
+      <button class="btn btn-primary" onclick="showBookForm()">+ Add Book</button>
+    </div>
+
+    <!-- Add / Edit Book Form (hidden by default) -->
+    <div id="bookFormPanel" class="form-panel hidden">
+      <h3 id="formTitle">Add New Book</h3>
+      <form id="bookForm">
+        <div class="form-group">
+          <label for="bookTitle">Title</label>
+          <input type="text" id="bookTitle" placeholder="e.g. The Alchemist" required />
+        </div>
+        <div class="form-group">
+          <label for="bookAuthor">Author</label>
+          <input type="text" id="bookAuthor" placeholder="e.g. Paulo Coelho" required />
+        </div>
+        <div class="form-group">
+          <label for="bookGenre">Genre</label>
+          <input type="text" id="bookGenre" placeholder="e.g. Fiction" required />
+        </div>
+        <div class="form-group">
+          <label for="bookYear">Year of Publication</label>
+          <input type="number" id="bookYear" placeholder="e.g. 1988" min="1000" max="2099" required />
+        </div>
+        <button type="submit" class="btn btn-success">Save Book</button>
+        <button type="button" class="btn btn-danger" onclick="hideBookForm()">Cancel</button>
+      </form>
+    </div>
+
+    <!-- Books Table -->
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Genre</th>
+          <th>Year</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody id="bookTableBody">
+        <!-- Filled by script.js -->
+      </tbody>
+    </table>
+  </div>
+
+  <footer class="footer">
+    &copy; 2026 Digital Library Management System — College Mini Project
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

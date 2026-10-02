@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard — Digital Library</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<!-- data-page tells script.js which page logic to run -->
+<body data-page="dashboard">
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <span class="logo">📚 Digital Library</span>
+    <ul class="nav-links">
+      <li><a href="index.html" class="active">Dashboard</a></li>
+      <li><a href="books.html">Book Catalog</a></li>
+      <li><a href="issue-return.html">Issue / Return</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1 class="page-title">Dashboard</h1>
+
+    <!-- Stat Cards -->
+    <div class="dashboard-cards">
+      <div class="card total">
+        <h2 id="totalBooks">0</h2>
+        <p>Total Books</p>
+      </div>
+      <div class="card available">
+        <h2 id="availableBooks">0</h2>
+        <p>Available Books</p>
+      </div>
+      <div class="card issued">
+        <h2 id="issuedBooks">0</h2>
+        <p>Issued Books</p>
+      </div>
+    </div>
+
+    <!-- Recent Books Table -->
+    <h2 class="mb-10" style="font-size:1.15rem; color:#444;">Recently Added Books</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Genre</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody id="recentBooksBody">
+        <!-- Filled by script.js -->
+      </tbody>
+    </table>
+  </div>
+
+  <footer class="footer">
+    &copy; 2026 Digital Library Management System — College Mini Project
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

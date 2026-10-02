@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Issue / Return — Digital Library</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body data-page="issue-return">
+
+  <!-- Navigation Bar -->
+  <nav class="navbar">
+    <span class="logo">📚 Digital Library</span>
+    <ul class="nav-links">
+      <li><a href="index.html">Dashboard</a></li>
+      <li><a href="books.html">Book Catalog</a></li>
+      <li><a href="issue-return.html" class="active">Issue / Return</a></li>
+      <li><a href="about.html">About</a></li>
+    </ul>
+  </nav>
+
+  <div class="container">
+    <h1 class="page-title">Issue / Return Books</h1>
+
+    <!-- Issue Book Form -->
+    <div class="form-panel">
+      <h3>Issue a Book</h3>
+      <form id="issueForm">
+        <div class="form-group">
+          <label for="issueBookSelect">Select Book</label>
+          <select id="issueBookSelect" required>
+            <option value="">-- Select a Book --</option>
+            <!-- Options filled by script.js -->
+          </select>
+        </div>
+        <div class="form-group">
+          <label for="issuedTo">Borrower Name</label>
+          <input type="text" id="issuedTo" placeholder="e.g. Amit Kumar" required />
+        </div>
+        <button type="submit" class="btn btn-primary">Issue Book</button>
+      </form>
+    </div>
+
+    <!-- Currently Issued Books -->
+    <h2 class="mb-10" style="font-size:1.15rem; color:#444;">Currently Issued Books</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Title</th>
+          <th>Author</th>
+          <th>Issued To</th>
+          <th>Issue Date</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="issuedBooksBody">
+        <!-- Filled by script.js -->
+      </tbody>
+    </table>
+  </div>
+
+  <footer class="footer">
+    &copy; 2026 Digital Library Management System — College Mini Project
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
